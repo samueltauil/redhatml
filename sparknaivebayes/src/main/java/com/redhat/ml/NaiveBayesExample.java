@@ -17,7 +17,7 @@ public class NaiveBayesExample {
         SparkSession spark = SparkSession
                 .builder()
                 .appName("NaiveBayesExample")
-                .master("redhatml")
+                .master("redhatml.oshinko.svc")
                 .getOrCreate();
 
         String masterServiceName = System.getenv("SPARK_MASTER");
