@@ -23,7 +23,6 @@ public class NaiveBayesExample {
         spark.sparkContext().setLogLevel("ERROR");
 
 
-        // $example on$
         // Load training data
         Dataset<Row> dataFrame =
                 spark.read().format("libsvm").load("src/main/resources/iris_svm.txt");
@@ -52,7 +51,6 @@ public class NaiveBayesExample {
         DecimalFormat df = new DecimalFormat("0.000");
 
         System.out.println("Test set accuracy = " + df.format(accuracy) + "%");
-
 
         spark.stop();
     }
