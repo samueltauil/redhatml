@@ -17,9 +17,11 @@ public class NaiveBayesExample {
         SparkSession spark = SparkSession
                 .builder()
                 .appName("NaiveBayesExample")
-                .master("local")
+                .master("redhatml")
                 .getOrCreate();
 
+        String masterServiceName = System.getenv("SPARK_MASTER");
+        System.out.println(masterServiceName);
         spark.sparkContext().setLogLevel("ERROR");
 
 
